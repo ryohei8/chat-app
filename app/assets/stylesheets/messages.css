@@ -3,10 +3,9 @@ a {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
+
 
 .wrapper {
   display: flex;
@@ -40,7 +39,7 @@ ul {
   color: #fafafa;
 }
 
-.create-chat-btn a {
+.create-room a {
   font-size: 10px;
   color: deepskyblue;
   padding: 14px;
@@ -63,11 +62,28 @@ ul {
   width: calc(100vw - 300px);
 }
 
+/* main chat header */
 .chat-header {
   height: 100px;
   background-color: #fff;
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.room-name {
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;
+}
+
+.close-room a{
+  border: solid 1px darkred;
+  color: darkred;
+  padding: 20px;
+}
+
 
 .chat-main {
   height: calc(100vh - 100px - 90px);
@@ -80,4 +96,8 @@ ul {
   background-color: #dddddd;
   padding: 20px 40px;
 }
+
+
+
+
 
