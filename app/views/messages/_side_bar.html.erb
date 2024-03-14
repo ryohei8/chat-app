@@ -4,56 +4,17 @@
     <%= link_to current_user.name, edit_user_path(current_user)%>
   </div>
   <div class="create-room">
-    <a href="#">チャットを作成する</a>
+    <%= link_to 'チャットを作成する', new_room_path %>
   </div>
 </div>
 
+
 <div class="rooms">
-  <ul class="room-list">
-    <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-    <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-    <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-     <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-         <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-         <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-         <li class="room-item">
-      <a href="">dev_room</a>
-    </li>
-  </ul>
+  <% current_user.rooms.each do |room| %>
+    <ul class="room-list">
+      <li class="room-item">
+        <a href=""><%= room.name %></a>
+      </li>
+    </ul>
+  <% end %>
 </div>
