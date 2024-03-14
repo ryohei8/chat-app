@@ -7,21 +7,8 @@
 </div>
 
 <%# chat-main %>
-<div class="chat-main">
-  <div class="chat-item">
-    <div class="chat-heading">
-      <div class="chat-name">Jordan</div>
-      <div class="chat-date">2024/3/13(Wed)12:24:30</div>
-    </div>
-    <div class="chat-text">おはよう</div>
-  </div>
-  <div class="chat-item">
-    <div class="chat-heading">
-      <div class="chat-name">Jordan</div>
-      <div class="chat-date">2024/3/13(Wed)12:24:30</div>
-    </div>
-    <div class="chat-text">こんにちは</div>
-  </div>
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%# chat-footer-form %>
